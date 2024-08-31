@@ -1,0 +1,5 @@
+@font-face {
+  font-family: 'MeowScript-Regular';
+  src: url(./MeowScript-Regular.woff) format('woff'),
+       url(./MeowScript-Regular.woff2) format('woff2');
+}

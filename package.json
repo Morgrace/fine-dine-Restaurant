@@ -1,0 +1,34 @@
+{
+  "name": "fine-dine",
+  "version": "1.0.0",
+  "description": "landing page for fine dine restaurant",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass sass/main.scss css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel watch:sass devserver ",
+    "compile:sass": "sass sass/main.scss css/style.comp.css",
+    "prefix:css": "postcss css/style.comp.css --use autoprefixer -b 'last 10 versions' -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Morgrace/fine-dine-Restaurant"
+  },
+  "author": "Morgrace Precious",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Morgrace/fine-dine-Restaurant/issues"
+  },
+  "homepage": "https://github.com/Morgrace/fine-dine-Restaurant#readme",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.77.8"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "live-server": "^1.2.2",
+    "postcss-cli": "^11.0.0"
+  }
+}

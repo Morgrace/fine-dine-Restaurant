@@ -1,0 +1,153 @@
+// merriweather 
+@font-face {
+    font-family: 'Merriweather';
+    src: url(../fonts/Merriweather/Merriweather-Light.woff2) format('woff2'),
+        url(../fonts/Merriweather/Merriweather-Light.woff) format('woff'),
+        url(../fonts/Merriweather/Merriweather-Light.ttf) format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url(../fonts/Merriweather/Merriweather-Regular.woff2) format('woff2'),
+        url(../fonts/Merriweather/Merriweather-Regular.woff) format('woff'),
+        url(../fonts/Merriweather/Merriweather-Regular.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+
+}
+
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url(../fonts/Merriweather/Merriweather-Bold.woff2) format('woff2'),
+        url(../fonts/Merriweather/Merriweather-Bold.woff) format('woff'),
+        url(../fonts/Merriweather/Merriweather-Bold.ttf) format('truetype');
+    font-weight: 700;
+    font-size: normal;
+    font-display: swap;
+
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url(../fonts/Merriweather/Merriweather-Black.woff2) format('woff2'),
+        url(../fonts/Merriweather/Merriweather-Black.woff) format('woff'),
+        url(../fonts/Merriweather/Merriweather-Black.ttf) format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+
+}
+
+//DM Sans
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url(../fonts/DM_Sans/static/DMSans-Bold.woff2) format('woff2'),
+        url(../fonts/DM_Sans/static/DMSans-Bold.woff) format('woff'),
+        url(../fonts/DM_Sans/static/DMSans-Bold.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url(../fonts/DM_Sans/static/DMSans-Regular.woff2) format('woff2'),
+        url(../fonts/DM_Sans/static/DMSans-Regular.woff) format('woff'),
+        url(../fonts/DM_Sans/static/DMSans-Regular.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+
+}
+
+// Meow_Script
+@font-face {
+    font-family: 'Meow Script';
+    src: url(../fonts/Meow_Script/converted-fonts/MeowScript-Regular.woff2) format('woff2'),
+        url(../fonts/Meow_Script/converted-fonts/MeowScript-Regular.woff) format('woff'),
+        url(../fonts/Meow_Script/converted-fonts/MeowScript-Regular.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+
+}
+
+//Roboto 
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto/Roboto-Black.woff2) format('woff2'),
+        url(../fonts/Roboto/Roboto-Black.woff) format('woff'),
+        url(../fonts/Roboto/Roboto-Black.ttf) format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto/Roboto-Bold.woff2) format('woff2'),
+        url(../fonts/Roboto/Roboto-Bold.woff) format('woff'),
+        url(../fonts/Roboto/Roboto-Bold.truetype) format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto/Roboto-Light.woff2) format('woff2'),
+        url(../fonts/Roboto/Roboto-Light.woff2) format('woff'),
+        url(../fonts/Roboto/Roboto-Light.woff2) format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto/Roboto-Medium.woff2) format('woff2'),
+        url(../fonts/Roboto/Roboto-Medium.woff2) format('woff'),
+        url(../fonts/Roboto/Roboto-Medium.woff2) format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto/Roboto-Regular.woff2) format('woff2'),
+        url(../fonts/Roboto/Roboto-Regular.woff2) format('woff'),
+        url(../fonts/Roboto/Roboto-Regular.woff2) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto/Roboto-Thin.woff2) format('woff2'),
+        url(../fonts/Roboto/Roboto-Thin.woff2) format('woff'),
+        url(../fonts/Roboto/Roboto-Thin.woff2) format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+// Roboto Condensed Variable font
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url(../fonts/Roboto_Condensed/converted-fonts/RobotoCondensed-VariableFont_wght.woff2) format('woff2'),
+        url(../fonts/Roboto_Condensed/converted-fonts/RobotoCondensed-VariableFont_wght.woff) format('woff'),
+        url(../fonts/Roboto_Condensed/converted-fonts/RobotoCondensed-VariableFont_wght.ttf) format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
