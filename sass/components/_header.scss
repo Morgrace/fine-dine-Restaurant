@@ -1,0 +1,61 @@
+@use '../abstracts/variables' as *;
+
+.header {
+    background-image: url(../img/hero-large-2x.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 90vh;
+
+    &__box {
+        display: flex;
+        align-items: center;
+        padding: 2.5rem 3.5rem;
+        background-color: rgba($color-black, .75);
+
+    }
+
+    &__logo {
+        margin-right: 1rem;
+    }
+
+    &__title {
+        margin-right: auto;
+        font-family: $font-heading--1;
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: $color-orange-1;
+        text-transform: uppercase;
+        width: 14%;
+
+    }
+
+    &__navigation-list {
+        display: flex;
+        list-style: none;
+    }
+
+    &__navigation-item {
+        span {
+            color: $color-orange-1;
+
+        }
+    }
+
+    &__navigation-link:link,
+    &__navigation-link:visited {
+        padding: 1.25rem 0;
+        padding-right: 1rem;
+        text-decoration: none;
+        color: $color-white;
+        font-family: $font-body--2;
+        font-weight: 700;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+    }
+
+    &__navigation-link {
+        display: flex;
+        gap: 1rem;
+    }
+}
