@@ -1,3 +1,53 @@
+//margin-right
 .mr-sm {
-    margin-right: 2rem;
+    margin-right: 2rem !important;
+}
+
+//margin-bottom
+.mb-sm-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-sm {
+    margin-bottom: 2rem !important;
+}
+
+.mb-md {
+    margin-bottom: 3rem !important;
+}
+
+.mb-xl {
+    margin-bottom: 8rem;
+}
+
+// font-size
+.fs21 {
+    font-size: 2.1rem !important;
+}
+
+.fs17 {
+    font-size: 1.7rem;
+}
+
+//font-weight
+.fw-light {
+    font-weight: 300 !important;
+}
+
+.fw-medium {
+    font-weight: 500 !important;
+}
+
+.fw-bold {
+    font-weight: 700;
+}
+
+//text
+.uppercase {
+    text-transform: uppercase;
+}
+
+//flex order
+.order-1 {
+    order: 1;
 }

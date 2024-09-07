@@ -1,0 +1,56 @@
+@use '../abstracts/variables' as *;
+
+.reviews {
+    padding: 9.6rem 0;
+    background-color: $color-dark-1;
+
+    &__box {
+        width: 80rem;
+        margin: 0 auto;
+    }
+
+    &__img-box {
+        width: 100%;
+        margin-bottom: 4rem;
+        position: relative;
+        text-align: center;
+
+
+
+        &::before,
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 45%;
+            height: .1rem;
+            border: 1px dotted rgba($color-dark-2, .5);
+            position: absolute;
+            top: 50%;
+        }
+
+        &::before {
+            left: 0;
+        }
+
+        &::after {
+            right: 0;
+        }
+    }
+
+    &__img {
+        width: 4rem;
+        height: 4rem;
+        fill: $color-dark-2;
+        transform: scaleX(-1);
+    }
+
+    &__text {
+        font-family: $font-heading--1;
+        font-size: 2.8rem;
+        font-weight: 300;
+        font-style: italic;
+        color: $color-white-1;
+        line-height: 1.8;
+        text-align: center;
+    }
+}

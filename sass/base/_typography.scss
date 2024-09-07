@@ -1,0 +1,24 @@
+@use '../abstracts/variables' as *;
+
+.heading__special {
+    font-size: 3.8rem;
+    font-family: $font-heading--2;
+    color: $color-orange-1;
+    font-weight: 400;
+}
+
+.heading__primary {
+    font-family: $font-heading--1;
+    font-size: 6.8rem;
+    font-weight: 300;
+    color: $color-white;
+    letter-spacing: 1rem;
+}
+
+.heading__secondary {
+    font-family: $font-heading--1;
+    font-size: 3.8rem;
+    color: $color-white-1;
+    font-weight: 400;
+
+}

@@ -1,0 +1,17 @@
+@use '../abstracts/variables' as *;
+
+.about {
+    font-size: 1.8rem;
+    font-family: $font-body--1;
+    font-weight: 400;
+    color: $color-white-1;
+    line-height: 1.8;
+    text-align: center;
+    background-color: $color-dark-1;
+    padding: 15rem 0;
+
+    &__box {
+        width: 75rem;
+        margin: 0 auto;
+    }
+}

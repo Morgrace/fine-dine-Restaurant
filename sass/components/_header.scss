@@ -1,11 +1,13 @@
 @use '../abstracts/variables' as *;
 
 .header {
-    background-image: url(../img/hero-large-2x.png);
+    background-image: linear-gradient(to bottom, transparent 75%, $color-dark-1), url(../img/hero-large-2x.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top;
-    height: 90vh;
+    background-position: bottom;
+    height: 95vh;
+
+    position: relative;
 
     &__box {
         display: flex;
@@ -57,5 +59,36 @@
     &__navigation-link {
         display: flex;
         gap: 1rem;
+        position: relative;
+
+        &:hover {
+            span {
+                color: $color-white;
+            }
+
+            &::after {
+                width: 90%;
+            }
+        }
+
+        &::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: 75%;
+            width: 0%;
+            height: .2rem;
+            background-color: $color-orange-1;
+            transition: all .5s ease;
+
+        }
+    }
+
+    &__primary-text-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
     }
 }

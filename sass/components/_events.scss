@@ -1,0 +1,24 @@
+@use '../abstracts/variables' as *;
+
+.events {
+    background-image: linear-gradient(rgba($color-black, .5), rgba($color-black, .5)), url(../img/img-3-large.png);
+    height: 80vh;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    &__title-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        span {
+            display: block;
+        }
+
+    }
+}

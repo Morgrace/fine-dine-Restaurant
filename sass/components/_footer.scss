@@ -1,0 +1,84 @@
+@use '../abstracts/variables' as *;
+
+.footer {
+    padding-top: 15rem;
+    height: 85vh;
+    background:
+        linear-gradient(rgba($color-dark-1, 1) 10%, transparent),
+        linear-gradient(to right, rgba($color-dark-1, .6) 5%, transparent),
+        linear-gradient(-45deg, rgba($color-dark-1, .9) 20%, transparent),
+        url(../img/img-footer.png);
+    background-size: cover;
+    background-position: bottom;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+    &__contact-us {
+        width: 44rem;
+        margin-left: 17%;
+
+    }
+
+    &__heading {
+        font-family: $font-heading--1;
+        font-weight: 300;
+        font-size: 3.8rem;
+        color: $color-orange-1;
+    }
+
+    &__sub-heading {
+        font-size: 2.8rem;
+        color: $color-white-1;
+        display: block;
+    }
+
+    &__opening-time {
+        font-size: 1.6rem;
+        color: $color-white-1;
+        margin-bottom: 3rem;
+
+        span:first-child {
+            display: block;
+            font-weight: 700;
+        }
+    }
+
+    &__legal {
+        font-family: $font-footer;
+        color: $color-white-1;
+        background-color: $color-dark-1;
+        padding: 2rem 0;
+
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__copyright {
+        font-size: 1.4rem;
+        font-weight: 400;
+
+    }
+
+    &__follow-link {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+
+    &__follow-link:link,
+    &__follow-link:visited {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: $color-white-1;
+        text-decoration: none;
+    }
+
+    &__follow-fb {
+        width: 1.6rem;
+        height: 1.6rem;
+        fill: $color-white-1;
+    }
+}
