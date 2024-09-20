@@ -13,11 +13,10 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="header__box">
-            <img src="img/logo.png" alt="logo" class="header__logo">
-            <span class="header__title">fine dine restaurant</span>
-            <ul class="header__navigation-list">
+    <aside class="hamburger ham-menu-disappear">
+        <input type="checkbox" class="hamburger__input" id="button">
+        <div class="hamburger__background">
+            <ul class="header__navigation-list hamburger__list">
                 <li class="header__navigation-item"><a href="#" class="header__navigation-link">Menu <span>\</span></a>
                 </li>
                 <li class="header__navigation-item"><a href="#" class="header__navigation-link">Events & catering
@@ -31,8 +30,35 @@
                 <li class="header__navigation-item mr-sm"><a href="#" class="header__navigation-link">Contact Us </a>
                 </li>
             </ul>
-            <button class="btn btn--orange">make reservation</button>
+            <button class="btn btn--orange hamburger__btn">make reservation</button>
         </div>
+
+        <label for="button" class="hamburger__button"><span>&nbsp;</span></label>
+
+
+
+    </aside>
+    <header class="header">
+        <div class="header__box">
+            <img src="img/logo.png" alt="logo" class="header__logo">
+            <span class="header__title">fine dine restaurant</span>
+            <ul class="header__navigation-list ham-menu">
+                <li class="header__navigation-item"><a href="#" class="header__navigation-link">Menu <span>\</span></a>
+                </li>
+                <li class="header__navigation-item"><a href="#" class="header__navigation-link">Events & catering
+                        <span>\</span></a></li>
+                <li class="header__navigation-item"><a href="#" class="header__navigation-link">Gift cards
+                        <span>\</span></a></li>
+                <li class="header__navigation-item"><a href="#" class="header__navigation-link">Faqs <span>\</span></a>
+                </li>
+                <li class="header__navigation-item"><a href="#" class="header__navigation-link">about <span>\</span></a>
+                </li>
+                <li class="header__navigation-item mr-sm"><a href="#" class="header__navigation-link">Contact Us </a>
+                </li>
+            </ul>
+            <button class="btn btn--orange ham-menu">make reservation</button>
+        </div>
+
         <div class="header__primary-text-box">
             <h1 class="heading__primary mb-sm uppercase">Exquisite Atmosphere</h1>
             <button class="btn btn--orange fs21">make reservation</button>
@@ -58,7 +84,7 @@
         </section>
         <section class="features">
             <div class="features__box">
-                <div class="features__img-box">
+                <div class="features__img-box order-2">
                     <img src="img/img-1.png" alt="a person eating steak" class="features__img">
                 </div>
 

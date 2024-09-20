@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 .footer {
     padding-top: 15rem;
@@ -15,11 +16,19 @@
     flex-direction: column;
     justify-content: space-between;
 
+    @include respond($bp-small) {
+        padding-top: 10rem ;
+        height: 75vh;
+    }
+
 
     &__contact-us {
         width: 44rem;
-        margin-left: 17%;
-
+        margin-left: 17vw;
+        @include respond($bp-small) {
+            width: 80%;
+            margin: 0 auto;
+        }
     }
 
     &__heading {
@@ -51,14 +60,22 @@
         color: $color-white-1;
         background-color: $color-dark-1;
         padding: 2rem 0;
+        text-align: center;
 
         display: flex;
         justify-content: space-around;
+
+        @include respond($bp-small) {
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
     }
 
     &__copyright {
         font-size: 1.4rem;
         font-weight: 400;
+        order: 1;
 
     }
 

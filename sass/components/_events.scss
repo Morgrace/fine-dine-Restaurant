@@ -2,17 +2,20 @@
 
 .events {
     background-image: linear-gradient(rgba($color-black, .5), rgba($color-black, .5)), url(../img/img-3-large.png);
-    height: 80vh;
     background-size: cover;
-    background-position: top;
+    background-position: top center;
     background-repeat: no-repeat;
 
     position: relative;
+
+    grid-column: full-start / full-end;
+
 
     &__title-box {
         position: absolute;
         top: 50%;
         left: 50%;
+        width: 100%;
         transform: translate(-50%, -50%);
         text-align: center;
 

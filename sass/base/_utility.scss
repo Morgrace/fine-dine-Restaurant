@@ -1,4 +1,7 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 //margin-right
+
 .mr-sm {
     margin-right: 2rem !important;
 }
@@ -50,4 +53,22 @@
 //flex order
 .order-1 {
     order: 1;
+}
+.order-2 {
+    @include respond($bp-medium) {
+        order: 1;
+    }
+}
+
+
+//hamburger function utility
+.ham-menu {
+    @include respond($bp-largest) {
+        display: none !important;
+    }
+}
+.ham-menu-disappear {
+    @media only screen and (min-width: $bp-largest) {
+        display: none !important;
+    }
 }

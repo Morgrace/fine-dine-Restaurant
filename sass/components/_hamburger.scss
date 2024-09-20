@@ -1,0 +1,125 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.hamburger {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+
+    width: 100%;
+    height: 40vh;
+
+
+    &__input {
+        display: none;
+
+        &:checked~.hamburger__background {
+            height: 50vh;
+        }
+
+        &:checked~.hamburger__background .hamburger__btn,
+        &:checked~.hamburger__background .hamburger__list {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        top: 3rem;
+        right: 6rem;
+
+        display: inline-block;
+
+        width: 6rem;
+        height: 6rem;
+
+        cursor: pointer;
+        text-align: center;
+
+        @include respond($bp-small) {
+            right: 1rem;
+        }
+
+        span {
+            position: relative;
+            top: 50%;
+
+            display: inline-block;
+
+            width: 3.5rem;
+            height: .2rem;
+
+            background-color: $color-orange-1;
+
+            &::before,
+            &::after {
+                position: absolute;
+                left: 0;
+
+                display: inline-block;
+
+                width: 3.5rem;
+                height: .2rem;
+
+                content: "";
+
+                background-color: $color-orange-1;
+            }
+
+            &::before {
+                top: -1rem;
+            }
+
+            &::after {
+                top: 1rem;
+            }
+        }
+    }
+
+    &__background {
+        position: absolute;
+        top: 37%;
+        backdrop-filter: blur(10px);
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        width: 100vw;
+        height: 0;
+
+        transition: all .4s;
+
+        background-color: rgba($color-black, .75);
+
+        gap: 2rem;
+
+        @include respond($bp-large) {
+            top: 34%;
+        }
+
+        @include respond($bp-small) {
+            top: 27%;
+        }
+    }
+
+    &__btn,
+    &__list {
+        transition: all .4s;
+
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &__list {
+        margin-top: 10rem;
+
+        @include respond($bp-small) {
+            margin-top: 3rem;
+            flex-direction: column;
+            align-items: center;
+
+        }
+    }
+}

@@ -1,65 +1,99 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 .header {
-    background-image: linear-gradient(to bottom, transparent 75%, $color-dark-1), url(../img/hero-large-2x.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
+    position: relative;
+
     height: 95vh;
 
-    position: relative;
+    background-image: linear-gradient(to bottom, transparent 75%, $color-dark-1), url(../img/hero-small.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+
+    @include respond($bp-small) {
+        height: 85vh;
+    }
+
+    @media only screen and (min-resolution: 192dpi) and (min-width: $bp-small),
+    (min-width: 75em) {
+        background-image: linear-gradient(to bottom, transparent 75%, $color-dark-1), url(../img/hero-large.png);
+    }
 
     &__box {
         display: flex;
         align-items: center;
-        padding: 2.5rem 3.5rem;
-        background-color: rgba($color-black, .75);
 
+        padding: 2.5rem 3.5rem;
+
+        background-color: rgba($color-black, .75);
     }
 
     &__logo {
         margin-right: 1rem;
+
+        @include respond($bp-small) {
+            max-width: 7.5rem;
+            max-height: 7.5rem;
+        }
     }
 
     &__title {
-        margin-right: auto;
         font-family: $font-heading--1;
         font-size: 2.2rem;
         font-weight: 700;
-        color: $color-orange-1;
-        text-transform: uppercase;
-        width: 14%;
 
+        width: 14rem;
+        margin-right: auto;
+
+        text-transform: uppercase;
+
+        color: $color-orange-1;
+
+        @include respond($bp-small) {
+            font-size: 1.9rem;
+        }
     }
 
     &__navigation-list {
         display: flex;
+
         list-style: none;
+
+        @include respond($bp-largest) {}
     }
 
     &__navigation-item {
         span {
             color: $color-orange-1;
 
+            @include respond($bp-small) {
+                color: transparent;
+            }
         }
     }
 
     &__navigation-link:link,
     &__navigation-link:visited {
+        font-family: $font-body--2;
+        font-size: 1.6rem;
+        font-weight: 700;
+
         padding: 1.25rem 0;
         padding-right: 1rem;
+
         text-decoration: none;
-        color: $color-white;
-        font-family: $font-body--2;
-        font-weight: 700;
-        font-size: 1.6rem;
         text-transform: uppercase;
+
+        color: $color-white;
     }
 
     &__navigation-link {
-        display: flex;
-        gap: 1rem;
         position: relative;
+
+        display: flex;
+
+        gap: 1rem;
 
         &:hover {
             span {
@@ -72,15 +106,18 @@
         }
 
         &::after {
-            content: "";
-            display: inline-block;
             position: absolute;
             top: 75%;
+
+            display: inline-block;
+
             width: 0%;
             height: .2rem;
-            background-color: $color-orange-1;
+
+            content: "";
             transition: all .5s ease;
 
+            background-color: $color-orange-1;
         }
     }
 
@@ -88,6 +125,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
+
         transform: translate(-50%, -50%);
         text-align: center;
     }

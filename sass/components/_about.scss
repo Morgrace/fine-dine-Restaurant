@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 .about {
     font-size: 1.8rem;
@@ -10,8 +11,16 @@
     background-color: $color-dark-1;
     padding: 15rem 0;
 
+    //experimental
+    grid-column: full-start / full-end;
+
+
     &__box {
         width: 75rem;
         margin: 0 auto;
+
+        @include respond($bp-medium) {
+            width: 80%;
+        }
     }
 }
