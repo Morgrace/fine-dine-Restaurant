@@ -1,7 +1,7 @@
 @use '../abstracts/variables' as *;
 
 .events {
-    background-image: linear-gradient(rgba($color-black, .5), rgba($color-black, .5)), url(../img/img-3-large.png);
+    background-image: linear-gradient(rgba($color-black, .5), rgba($color-black, .5)), url(../img/img-3-small.png);
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
@@ -9,6 +9,11 @@
     position: relative;
 
     grid-column: full-start / full-end;
+
+    @media only screen and (min-resolution: 192dpi) and (min-width: $bp-small),
+    (min-width: 75em) {
+        background-image: linear-gradient(rgba($color-black, .5), rgba($color-black, .5)), url(../img/img-3-large.png);
+    }
 
 
     &__title-box {

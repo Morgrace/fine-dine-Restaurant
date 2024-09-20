@@ -302,12 +302,17 @@ body {
 }
 
 .events {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/img-3-large.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/img-3-small.png);
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
   position: relative;
   grid-column: full-start/full-end;
+}
+@media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 75em) {
+  .events {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/img-3-large.png);
+  }
 }
 .events__title-box {
   position: absolute;
