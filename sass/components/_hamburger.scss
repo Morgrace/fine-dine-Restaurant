@@ -17,6 +17,10 @@
             height: 50vh;
         }
 
+        &:checked~.overlay {
+            display: block;
+        }
+
         &:checked~.hamburger__background .hamburger__btn,
         &:checked~.hamburger__background .hamburger__list {
             opacity: 1;

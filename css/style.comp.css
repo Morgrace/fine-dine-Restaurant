@@ -19,6 +19,7 @@ body {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 1.8rem;
   font-weight: 400;
+  background-color: #101A1E;
   box-sizing: border-box;
   position: relative;
 }
@@ -222,6 +223,29 @@ body {
   }
 }
 
+.overlay {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-color: transparent;
+  z-index: -1;
+}
+
+.sticky {
+  position: fixed !important;
+  background-color: rgba(0, 0, 0, 0.85) !important;
+  backdrop-filter: blur(2px) !important;
+}
+
+.lazy-img {
+  filter: blur(20px);
+}
+
+.section--hidden {
+  transform: translateY(15rem);
+}
+
 .about {
   font-size: 1.8rem;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
@@ -230,7 +254,7 @@ body {
   line-height: 1.8;
   text-align: center;
   background-color: #101A1E;
-  padding: 15rem 0;
+  margin-top: 15rem;
   grid-column: full-start/full-end;
 }
 .about__box {
@@ -302,17 +326,13 @@ body {
 }
 
 .events {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/img-3-small.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/img-3-small.webp);
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
   position: relative;
   grid-column: full-start/full-end;
-}
-@media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 75em) {
-  .events {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/img-3-large.png);
-  }
+  margin-top: 7rem;
 }
 .events__title-box {
   position: absolute;
@@ -328,7 +348,7 @@ body {
 
 .features {
   background-color: #101A1E;
-  padding-bottom: 7rem;
+  padding-top: 15rem;
   grid-column: full-start/full-end;
 }
 @media only screen and (max-width: 51.875em) {
@@ -424,7 +444,7 @@ body {
 .footer {
   padding-top: 15rem;
   height: 85vh;
-  background: linear-gradient(#101a1e 10%, transparent), linear-gradient(to right, rgba(16, 26, 30, 0.6) 5%, transparent), linear-gradient(-45deg, rgba(16, 26, 30, 0.9) 20%, transparent), url(../img/img-footer.png);
+  background: linear-gradient(#101a1e 10%, transparent), linear-gradient(to right, rgba(16, 26, 30, 0.6) 5%, transparent), linear-gradient(-45deg, rgba(16, 26, 30, 0.9) 20%, transparent), url(../img/img-footer.webp);
   background-size: cover;
   background-position: bottom;
   display: flex;
@@ -518,6 +538,9 @@ body {
 .hamburger__input:checked ~ .hamburger__background {
   height: 50vh;
 }
+.hamburger__input:checked ~ .overlay {
+  display: block;
+}
 .hamburger__input:checked ~ .hamburger__background .hamburger__btn, .hamburger__input:checked ~ .hamburger__background .hamburger__list {
   opacity: 1;
   visibility: visible;
@@ -602,7 +625,7 @@ body {
 .header {
   position: relative;
   height: 95vh;
-  background-image: linear-gradient(to bottom, transparent 75%, #101A1E), url(../img/hero-small.png);
+  background-image: linear-gradient(to bottom, transparent 75%, #101A1E), url(../img/hero-small.webp);
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
@@ -612,16 +635,13 @@ body {
     height: 85vh;
   }
 }
-@media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 75em) {
-  .header {
-    background-image: linear-gradient(to bottom, transparent 75%, #101A1E), url(../img/hero-large.png);
-  }
-}
 .header__box {
   display: flex;
   align-items: center;
+  width: 100%;
   padding: 2.5rem 3.5rem;
   background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1;
 }
 .header__logo {
   margin-right: 1rem;
@@ -672,6 +692,7 @@ body {
   position: relative;
   display: flex;
   gap: 1rem;
+  transition: opacity 0.6s;
 }
 .header__navigation-link:hover span {
   color: #fff;

@@ -8,7 +8,7 @@
         linear-gradient(rgba($color-dark-1, 1) 10%, transparent),
         linear-gradient(to right, rgba($color-dark-1, .6) 5%, transparent),
         linear-gradient(-45deg, rgba($color-dark-1, .9) 20%, transparent),
-        url(../img/img-footer.png);
+        url(../img/img-footer.webp);
     background-size: cover;
     background-position: bottom;
 
@@ -17,7 +17,7 @@
     justify-content: space-between;
 
     @include respond($bp-small) {
-        padding-top: 10rem ;
+        padding-top: 10rem;
         height: 75vh;
     }
 
@@ -25,6 +25,7 @@
     &__contact-us {
         width: 44rem;
         margin-left: 17vw;
+
         @include respond($bp-small) {
             width: 80%;
             margin: 0 auto;
